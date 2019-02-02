@@ -13,7 +13,7 @@ describe( 'Syntax error dissection', () => {
         expression: 'eval( \'const b = ( => };\' );',
         site: 'Object.eval',
         type: 'SyntaxError',
-        file: '/app/tests/syntax_errors.spec.js',
+        file: expect.stringContaining( 'syntax_errors.spec.js' ),
         stack: expect.any( Array )
       } );
     }

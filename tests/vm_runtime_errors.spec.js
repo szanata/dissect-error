@@ -25,7 +25,7 @@ module.exports = () => {
         message: 'Expected error',
         column: 14,
         line: 8,
-        file: '/app/tests/vm_runtime_errors.spec.js',
+        file: expect.stringContaining( 'vm_runtime_errors.spec.js' ),
         expression: 'ctx.module.exports();',
         site: 'exports',
         stack: expect.any( Array )

@@ -13,7 +13,7 @@ describe( 'Runtime error dissection', () => {
         message: 'Expected error',
         type: 'Error',
         site: 'Object.Error',
-        file: '/app/tests/runtime_errors.spec.js',
+        file: expect.stringContaining( 'runtime_errors.spec.js' ),
         stack: expect.any( Array )
       } );
     }

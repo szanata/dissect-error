@@ -1,5 +1,6 @@
 language: node_js
 script:
+  - npm run lint:dry
   - npm test
 node_js:
   - "11"

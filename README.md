@@ -1,5 +1,7 @@
 # Dissect Error
 
+[![Build Status](https://travis-ci.org/szanata/dissect-error.svg?branch=master)](https://travis-ci.org/szanata/dissect-error)
+
 Parse some js error and extract a sort of usefull info like:
 - Error type
 - message
@@ -8,7 +10,7 @@ Parse some js error and extract a sort of usefull info like:
 - column
 - expression which threw the error
 - file name (with path)
-- stack trace
+- stack trace (as array)
 
 Works with **runtime errors**, **syntax errors**, **node VM eval errors** and plain **eval errors**
 
@@ -46,12 +48,21 @@ The dissect function return an object with the following properties:
 | -------- | ----------- |
 | .type | JS error types like: Error, SyntaxError, MyCustomError, etc |
 | .message | The message from the error |
-| .site | What threw the error, like the function name or class name |
+| .site | What threw the error, Eg. `Object.eval`|
 | .line | Line # where the error happen |
 | .column | Column # where the error happen |
-| .stack | Array of frames from the stack trace, each frame is an object with `site`, `file`, `line` and `column` |
+| .stack | Array of frames from the stack trace, each frame is an object (see below) |
 | .expression | Expression which threw the error. Eg: `const 2 = 1;` |
-| .file | The file which thre the error. Eg: `/app/project/index.js` |
+| .file | The file which threw the error. Eg: `/app/project/index.js` |
+
+The `.stack` returns an array of stack frames wich have the folowing properties
+
+| property | description |
+| -------- | ----------- |
+| .site | What thre the error. Eg. `Object.eval` |
+| .file | The file which threw the error |
+| .line | Line # where the error happen |
+| .column | Column # where the error happen |
 
 ## Use cases
 
