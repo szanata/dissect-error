@@ -3,16 +3,18 @@
 [![Build Status](https://travis-ci.org/szanata/dissect-error.svg?branch=master)](https://travis-ci.org/szanata/dissect-error)
 
 Parse some js error and extract a sort of usefull info like:
-- Error type
+- type (`SyntaxError`, `ReferenceError`, etc)
 - message
 - error site
 - line
 - column
-- expression which threw the error
-- file name (with path)
-- stack trace (as array)
+- code that threw the error
+- file
+- stack trace (parsed as array)
 
 Works with **runtime errors**, **syntax errors**, **node VM eval errors** and plain **eval errors**
+
+And have **zero** dependencies!
 
 ## How to use?
 
