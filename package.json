@@ -2,7 +2,7 @@
   "name": "dissect-error",
   "version": "0.1.0",
   "description": "Parse js Error and Error based object to a simple useful format",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest 2>&1",
     "lint": "eslint ./src --fix && eslint ./tests --fix",
