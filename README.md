@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/szanata/dissect-error.svg?branch=master)](https://travis-ci.org/szanata/dissect-error)
 
-Parse some js error and extract a sort of usefull info like:
+Parse some js error and extract all sorts of useful info:
 - type (`SyntaxError`, `ReferenceError`, etc)
 - message
 - error site
@@ -65,6 +65,40 @@ The `.stack` returns an array of stack frames wich have the folowing properties
 | .file | The file which threw the error |
 | .line | Line # where the error happen |
 | .column | Column # where the error happen |
+
+## Output sample
+
+```js
+{
+  type: 'ReferenceError',
+  site: 'call',
+  stack: [ 
+    { 
+      site: 'module.exports.realtime',
+      file: 'evalmachine.<anonymous>',
+      line: 3,
+      column: 21
+    },
+    {
+      site: 'call',
+      file: '/app/project/lib/index.js',
+      line: 34,
+      column: 51
+    },
+    {
+      site: 'run',
+      file: '/app/project/lib/index.js',
+      line: 40,
+      column: 32
+    }
+  ],
+  column: 51,
+  line: 34,
+  expression: 'const result = await fn.call( null, ...args );',
+  message: 'fn is not defined',
+  file: '/app/project/lib/index.js'
+}
+```       
 
 ## Use cases
 
