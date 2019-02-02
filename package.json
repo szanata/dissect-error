@@ -1,6 +1,6 @@
 {
   "name": "dissect-error",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Parse js Error and Error based object to a simple useful format",
   "main": "src/index.js",
   "scripts": {

@@ -2,7 +2,6 @@
 #!/bin/bash
 
 docker run --rm -it \
-  -p 8088:8088 \
   -e NODE_ENV="development" \
   -e NPM_TOKEN="$NPM_TOKEN" \
   -v `pwd`:/app/ \
