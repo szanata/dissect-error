@@ -1,0 +1,31 @@
+{
+  "name": "dissect-error",
+  "version": "0.0.1",
+  "description": "Parse js Error and Error based object to a simple useful format",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest 2>&1",
+    "lint": "eslint ./src --fix && eslint ./tests --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szanata/dissect-error.git"
+  },
+  "keywords": [
+    "error",
+    "parser",
+    "js",
+    "tool",
+    "human"
+  ],
+  "author": "Stéfano Stypulkowski Zanata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szanata/dissect-error/issues"
+  },
+  "homepage": "https://github.com/szanata/dissect-error#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "jest": "^24.0.0"
+  }
+}
